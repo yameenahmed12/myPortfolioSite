@@ -1,82 +1,66 @@
 const INFO = {
 	main: {
-		title: "Reactfolio by truethari",
-		name: "Tharindu N.",
-		email: "mail@tharindu.dev",
-		logo: "../logo.png",
+		name: "Yameen Ahmed",
+		title: "Software Developer",
+		description: "I am a software developer with a passion for building innovative solutions. I specialize in full-stack development and enjoy creating efficient, scalable applications.",
+		image: "profile.jpg",
+		logo: "logo.png"
 	},
 
 	socials: {
-		twitter: "https://twitter.com/",
-		github: "https://github.com/",
-		linkedin: "https://linkedin.com/",
-		instagram: "https://instagram.com/",
-		stackoverflow: "https://stackoverflow.com/",
-		facebook: "https://facebook.com/",
+		github: "https://github.com/yameenahmed12",
+		linkedin: "https://www.linkedin.com/in/yameenahmed1/"
 	},
 
 	homepage: {
-		title: "Full-stack web and mobile app developer, and amateur astronaut.",
-		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies. I enjoy solving complex problems and learning new skills. I am passionate about creating high-quality code that follows best practices and industry standards. I am always looking for new challenges and opportunities to grow as a developer.",
+		title: "Hi, I'm Yameen Ahmed",
+		description: "I'm a software developer passionate about creating efficient and scalable solutions. I enjoy working on challenging projects and learning new technologies."
 	},
 
 	about: {
-		title: "I’m Tharindu N. I live in Sri Lanka, where I design the future.",
+		title: "About Me",
 		description:
-			"I've worked on a variety of projects over the years and I'm proud of the progress I've made. Many of these projects are open-source and available for others to explore and contribute to. If you're interested in any of the projects I've worked on, please feel free to check out the code and suggest any improvements or enhancements you might have in mind. Collaborating with others is a great way to learn and grow, and I'm always open to new ideas and feedback.",
+			"My journey in tech is fueled by a passion for building things that matter—whether it's AI for mental health, research, or web platforms. I thrive on solving tough problems, learning new technologies, and collaborating with creative minds. I believe in using technology to make a real impact and love taking on new challenges. Outside of tech, you'll find me hiking, playing cricket, or lifting—activities that keep me energized and inspired."
 	},
 
 	articles: {
-		title: "I'm passionate about pushing the boundaries of what's possible and inspiring the next generation of innovators.",
+		title: "I write about building, learning, and experimenting with new technologies.",
 		description:
-			"Chronological collection of my long-form thoughts on programming, leadership, product design, and more.",
+			"Chronological collection of my thoughts on web dev, LLMs, startups, and anything in between.",
 	},
 
 	projects: [
 		{
-			title: "Project 1",
+			title: "AI Customer Support Chatbot",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
+				"Built a personalized support chatbot using Groq API to serve dynamic responses for small businesses. Delivered a 30% accuracy improvement over static templates.",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
-			linkText: "View Project",
-			link: "https://github.com",
+			linkText: "GitHub",
+			link: "https://github.com/yameenahmed12",
 		},
-
 		{
-			title: "Project 2",
+			title: "Inventory Tracker for Small Businesses",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
+				"Web app built with Next.js, Firebase, and Material UI to help local shops move off Excel sheets. Reduced manual entry time by 50%.",
+			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+			linkText: "GitHub",
+			link: "https://github.com/yameenahmed12",
+		},
+		{
+			title: "Highway Traffic Monitoring System",
+			description:
+				"Python/OpenCV app to detect and track vehicles using MOG2 and Euclidean distance. Improved object tracking accuracy by 22%.",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
-			linkText: "View Project",
-			link: "https://github.com",
+			linkText: "GitHub",
+			link: "https://github.com/yameenahmed12",
 		},
-
 		{
-			title: "Project 3",
+			title: "TravelMate – AI-Powered Trip Planner",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png",
-			linkText: "View Project",
-			link: "https://github.com",
-		},
-
-		{
-			title: "Project 4",
-			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
+				"Plan trips with weather forecasts, historical climate fallback, and smart packing lists powered by LLMs (Cohere, Gemini). Built with Next.js, Tomorrow.io, Firebase, and Open-Meteo.",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
-			linkText: "View Project",
-			link: "https://github.com",
-		},
-
-		{
-			title: "Project 5",
-			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
-			linkText: "View Project",
-			link: "https://github.com",
+			linkText: "GitHub",
+			link: "https://github.com/yameenahmed12",
 		},
 	],
 };

@@ -1,0 +1,61 @@
+:root {
+    --primary-color: #8a2be2; /* rich purple */
+    --secondary-color: #ff4f87; /* vibrant pink */
+    --tertiary-color: #1a1a1a; /* deep gray-black */
+    --accent-color: #e60073;
+    --link-color: #ffffff;
+    --bg-color: #0d0d0d; /* true black background */
+    --text-color: #e0e0e0; /* soft white */
+    --card-bg: #1c1c1c; /* used for cards or sections */
+    --border-color: #333;
+  }
+  html, body, #root, .App {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  a:hover {
+    color: var(--accent-color);
+  }
+  
+  section, .card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-color);
+  }
+  
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

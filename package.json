@@ -3,12 +3,13 @@
 	"version": "1.1.0",
 	"description": "Personal portfolio template built using Reactjs",
 	"author": {
-		"name": "Tharindu N. Madhusanka",
-		"email": "mail@tharindu.dev",
-		"url": "https://tharindu.dev"
+		"name": "Yameen Ahmed",
+		"email": "yameen.ahmed124@gmail.com",
+		"url": "https://yameenahmed.dev"
 	},
 	"license": "MIT",
 	"private": true,
+	"homepage": "https://yameenahmed12.github.io/mySite2.0",
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^6.4.0",
 		"@fortawesome/free-brands-svg-icons": "^6.4.0",
@@ -18,6 +19,7 @@
 		"@testing-library/jest-dom": "^5.16.5",
 		"@testing-library/react": "^13.4.0",
 		"@testing-library/user-event": "^13.5.0",
+		"animate.css": "^4.1.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-ga4": "^2.1.0",
@@ -27,24 +29,22 @@
 		"styled-components": "^5.3.10",
 		"web-vitals": "^2.1.4"
 	},
+	"devDependencies": {
+		"gh-pages": "^6.3.0"
+	},
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
 	},
 	"eslintConfig": {
-		"extends": [
-			"react-app",
-			"react-app/jest"
-		]
+		"extends": ["react-app", "react-app/jest"]
 	},
 	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
+		"production": [">0.2%", "not dead", "not op_mini all"],
 		"development": [
 			"last 1 chrome version",
 			"last 1 firefox version",

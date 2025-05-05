@@ -1,14 +1,30 @@
 :root {
-	/* ------- colors ------- */
-	--primary-color: #27272a;
-	--secondary-color: #65656d;
-	--tertiary-color: #acacb4;
-	--quaternary-color: #e4e4e7;
-	--link-color: #14b8a6;
-	/* ---------------------- */
-
-	/* ------- fonts ------- */
-	--primary-font: "Heebo", sans-serif;
-	--secondary-font: "Roboto", sans-serif;
-	/* --------------------- */
-}
+	--primary-color: #7289da;
+	--secondary-color: #b3b3b3;
+	--tertiary-color: #1e1e1e;
+	--accent-color: #7289da;
+	--link-color: #7289da;
+	--bg-color: #121212;
+	--primary-color: #5e42a6;
+	--secondary-color: #b74e91;
+	--tertiary-color: #261c3e;
+	--accent-color: #953d75;
+	--link-color: #ffffff;
+	--bg-color: #261c3e;
+	--text-color: #ffffff;
+  }
+  @keyframes fadeInUp {
+	from {
+	  opacity: 0;
+	  transform: translateY(20px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  
+  .fade-in-up {
+	animation: fadeInUp 1s ease-out forwards;
+  }
+  

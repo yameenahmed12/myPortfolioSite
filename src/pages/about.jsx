@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
+import '../styles/homepage.css';
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
@@ -33,11 +34,8 @@ const About = () => {
 				<NavBar active="about" />
 				<div className="content-wrapper">
 					<div className="about-logo-container">
-						<div className="about-logo">
-							<Logo width={46} />
-						</div>
+						<Logo width={46} />
 					</div>
-
 					<div className="about-container">
 						<div className="about-main">
 							<div className="about-right-side">
@@ -45,29 +43,20 @@ const About = () => {
 									{INFO.about.title}
 								</div>
 
-								<div className="subtitle about-subtitle">
+								<div className="subtitle about-subtitle about-centered-bio">
 									{INFO.about.description}
 								</div>
-							</div>
 
-							<div className="about-left-side">
-								<div className="about-image-container">
-									<div className="about-image-wrapper">
-										<img
-											src="about.jpg"
-											alt="about"
-											className="about-image"
-										/>
-									</div>
+								<div className="about-hobbies-images-row">
+									<img src="/hiking.jpg" alt="Hiking" className="about-hobby-image" />
+									<img src="/cricket.jpg" alt="Cricket" className="about-hobby-image" />
+									<img src="/lifting.jpg" alt="Lifting" className="about-hobby-image" />
 								</div>
 
 								<div className="about-socials">
 									<Socials />
 								</div>
 							</div>
-						</div>
-						<div className="about-socials-mobile">
-							<Socials />
 						</div>
 					</div>
 					<div className="page-footer">

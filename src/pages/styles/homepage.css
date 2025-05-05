@@ -23,12 +23,30 @@
 	align-items: flex-start;
 }
 
+.homepage-name {
+	font-size: 3.5rem;
+	font-weight: 800;
+	letter-spacing: -1px;
+	margin-bottom: 1rem;
+	background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	line-height: 1.1;
+}
+
 .homepage-title {
 	width: 85% !important;
+	font-size: 1.5rem;
+	font-weight: 600;
+	line-height: 1.4;
+	margin-bottom: 1rem;
 }
 
 .homepage-subtitle {
 	width: 85% !important;
+	font-size: 1.1rem;
+	line-height: 1.6;
+	color: var(--secondary-color);
 }
 
 .homepage-first-area-right-side {
@@ -43,12 +61,26 @@
 
 .homepage-image-wrapper {
 	overflow: hidden;
-	border-radius: 10%;
-	transform: rotate(3deg);
+	border-radius: 16px;
+	transform: rotate(2deg);
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.homepage-image-wrapper:hover {
+	transform: rotate(0deg);
+	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
 }
 
 .homepage-image-wrapper img {
 	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.homepage-image-wrapper:hover img {
+	transform: scale(1.02);
 }
 
 .homepage-socials {
@@ -61,16 +93,21 @@
 .homepage-social-icon {
 	padding-right: 20px;
 	font-size: 25px;
-	transition: color 0.2s ease-in-out;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 	color: var(--secondary-color);
 }
 
 .homepage-social-icon:hover {
 	color: var(--primary-color);
+	transform: translateY(-3px);
 }
 
 .homepage-after-title {
-	display: flex;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center align the sections horizontally */
+    gap: 20px; /* Add spacing between sections */
+    width: 100%; /* Ensure it takes the full width */
 }
 
 .homepage-projects {
@@ -89,8 +126,162 @@
 }
 
 .homepage-works {
-	flex-basis: 600px;
+	width: 100%; /* Ensure it takes the full width of the container */
+	max-width: 1000px; /* Optional: Limit the maximum width */
+	margin: 0 auto; /* Center the block horizontally */
 	padding-top: 30px;
+	display: flex;
+	flex-direction: row; /* Align cards in a row */
+	justify-content: center; /* Center the cards horizontally */
+	align-items: flex-start; /* Align cards to the top */
+	gap: 20px; /* Add spacing between cards */
+	text-align: center; /* Center text inside the section */
+	flex-wrap: wrap; /* Wrap cards to the next row if needed */
+	overflow: hidden; /* Prevent horizontal overflow */
+  }
+
+.contact-button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+}
+
+.contact-form-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.8);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	backdrop-filter: blur(5px);
+}
+
+.contact-form-container {
+	background: var(--bg-secondary);
+	padding: 2rem;
+	border-radius: 12px;
+	width: 90%;
+	max-width: 500px;
+	position: relative;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+	border: 1px solid var(--border-color);
+}
+
+.close-button {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	background: none;
+	border: none;
+	color: var(--secondary-color);
+	font-size: 1.5rem;
+	cursor: pointer;
+	transition: color 0.3s ease;
+}
+
+.close-button:hover {
+	color: var(--primary-color);
+}
+
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.contact-form h2 {
+	color: var(--primary-color);
+	margin-bottom: 1rem;
+	font-size: 1.5rem;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.form-group label {
+	color: var(--secondary-color);
+	font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+	padding: 0.75rem;
+	border-radius: 6px;
+	border: 1px solid var(--border-color);
+	background: var(--bg-primary);
+	color: var(--text-color);
+	font-size: 1rem;
+	transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+	outline: none;
+	border-color: var(--primary-color);
+	box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.2);
+}
+
+.form-group textarea {
+	min-height: 120px;
+	resize: vertical;
+}
+
+.submit-button {
+	background: var(--primary-color);
+	color: white;
+	border: none;
+	padding: 0.75rem 1.5rem;
+	border-radius: 6px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	margin-top: 1rem;
+}
+
+.submit-button:hover {
+	background: var(--secondary-color);
+	transform: translateY(-2px);
+}
+
+.submit-button:active {
+	transform: translateY(0);
+}
+
+.form-error {
+	background: rgba(255, 0, 0, 0.1);
+	color: #ff4444;
+	padding: 1rem;
+	border-radius: 6px;
+	margin-bottom: 1rem;
+	border: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+.form-success {
+	background: rgba(0, 255, 0, 0.1);
+	color: #00ff00;
+	padding: 1rem;
+	border-radius: 6px;
+	margin-bottom: 1rem;
+	border: 1px solid rgba(0, 255, 0, 0.2);
+}
+
+.submit-button:disabled {
+	background: var(--secondary-color);
+	opacity: 0.7;
+	cursor: not-allowed;
+	transform: none;
+}
+
+.submit-button:disabled:hover {
+	transform: none;
 }
 
 @media (max-width: 1024px) {
@@ -100,10 +291,15 @@
 
 	.homepage-first-area-left-side {
 		display: flex;
-		flex-direction: column; /* Changed: set direction to column */
+		flex-direction: column;
 		align-items: flex-start;
 		width: 100%;
 		order: 2;
+	}
+
+	.homepage-name {
+		font-size: 3rem;
+		width: 100%;
 	}
 
 	.homepage-title {
@@ -141,10 +337,48 @@
 	.homepage-articles {
 		flex-basis: auto;
 	}
+	@media (max-width: 1100px) {
+		.homepage-works {
+			width: 100%; /* Ensure it takes the full width of the container */
+			max-width: 1200px; /* Increase the max-width for better alignment */
+			margin: 0 auto; /* Center the block horizontally */
+			padding-top: 30px;
+			display: flex;
+			flex-direction: row; /* Align cards in a row */
+			justify-content: space-evenly; /* Distribute cards evenly with equal spacing */
+			align-items: flex-start; /* Align cards to the top */
+			gap: 20px; /* Add spacing between cards */
+			flex-wrap: wrap; /* Wrap cards to the next row if needed */
+			text-align: center; /* Center text inside the section */
+			overflow: hidden; /* Prevent horizontal overflow */
+		  }
+	  }
+	}
+@media (max-width: 600px) {
+	.homepage-logo-container {
+		padding-top: 100px;
+	}
 
-	.homepage-works {
-		flex-basis: auto;
-		margin-left: -25px;
-		margin-right: -25px;
+	.homepage-name {
+		font-size: 2.5rem;
+	}
+
+	.homepage-title {
+		font-size: 1.3rem;
+	}
+
+	.homepage-subtitle {
+		font-size: 1rem;
+	}
+
+	.homepage-image-container {
+		width: 90%;
+		height: auto;
+		margin: 0 auto;
+	}
+
+	.homepage-social-icon {
+		font-size: 20px;
+		padding-right: 15px;
 	}
 }

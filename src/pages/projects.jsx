@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
+import '../styles/homepage.css';
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
@@ -33,13 +34,11 @@ const Projects = () => {
 				<NavBar active="projects" />
 				<div className="content-wrapper">
 					<div className="projects-logo-container">
-						<div className="projects-logo">
-							<Logo width={46} />
-						</div>
+						<Logo width={46} />
 					</div>
 					<div className="projects-container">
 						<div className="title projects-title">
-							Things I’ve made trying to put my dent in the
+							Things I've made trying to put my dent in the
 							universe.
 						</div>
 

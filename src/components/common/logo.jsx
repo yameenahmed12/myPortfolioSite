@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import INFO from "../../data/user";
@@ -6,14 +6,32 @@ import INFO from "../../data/user";
 import "./styles/logo.css";
 
 const Logo = (props) => {
-	let { width, link } = props;
+	const { width = 150, link = true, isHomepage = false } = props;
+	const [logoSize, setLogoSize] = useState(width);
+	const [imageError, setImageError] = useState(false);
 
-	if (link === undefined) {
-		link = true;
-	}
+	useEffect(() => {
+		if (!isHomepage) return;
+
+		const handleScroll = () => {
+			const scroll = Math.round(window.pageYOffset, 2);
+			const newSize = Math.max(120, 150 - (scroll * 4) / 10);
+			setLogoSize(newSize);
+		};
+
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, [isHomepage]);
+
+	const handleImageError = () => {
+		setImageError(true);
+		console.error("Failed to load logo image");
+	};
 
 	const imageElement = (
-		<img src={INFO.main.logo} alt="logo" className="logo" width={width} />
+		<div className={`logo-container ${isHomepage ? 'homepage-logo' : ''}`}>
+			<img src={INFO.main.logo} alt="logo" className="logo" width={logoSize} height={logoSize} onError={handleImageError} />
+		</div>
 	);
 
 	return (
