@@ -3,8 +3,8 @@ const INFO = {
 		name: "Yameen Ahmed",
 		title: "Software Developer",
 		description: "I am a software developer with a passion for building innovative solutions. I specialize in full-stack development and enjoy creating efficient, scalable applications.",
-		image: "profile.jpg",
-		logo: "logo.png"
+		image: "/homepage.jpg",
+		logo: "/logo.png"
 	},
 
 	socials: {

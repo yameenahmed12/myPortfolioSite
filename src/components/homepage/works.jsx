@@ -8,7 +8,7 @@ const Works = () => {
 				<div className="works-body">
 					<div className="work">
 						<img
-							src="/gt.png"
+							src={process.env.PUBLIC_URL + "/gt.png"}
 							alt="Georgia Tech"
 							className="work-image"
 						/>
@@ -26,7 +26,7 @@ const Works = () => {
 
 					<div className="work">
 						<img
-							src="/mtc.png"
+							src={process.env.PUBLIC_URL + "/mtc.png"}
 							alt="Muslim Tech Collaborative"
 							className="work-image"
 						/>
@@ -44,7 +44,7 @@ const Works = () => {
 
 					<div className="work">
 						<img
-							src="/target.png"
+							src={process.env.PUBLIC_URL + "/target.png"}
 							alt="Target"
 							className="work-image"
 						/>

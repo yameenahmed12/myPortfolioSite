@@ -30,7 +30,7 @@ const Logo = (props) => {
 
 	const imageElement = (
 		<div className={`logo-container ${isHomepage ? 'homepage-logo' : ''}`}>
-			<img src={INFO.main.logo} alt="logo" className="logo" width={logoSize} height={logoSize} onError={handleImageError} />
+			<img src={process.env.PUBLIC_URL + INFO.main.logo} alt="logo" className="logo" width={logoSize} height={logoSize} onError={handleImageError} />
 		</div>
 	);
 

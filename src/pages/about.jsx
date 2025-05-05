@@ -48,9 +48,9 @@ const About = () => {
 								</div>
 
 								<div className="about-hobbies-images-row">
-									<img src="/hiking.jpg" alt="Hiking" className="about-hobby-image" />
-									<img src="/cricket.jpg" alt="Cricket" className="about-hobby-image" />
-									<img src="/lifting.jpg" alt="Lifting" className="about-hobby-image" />
+									<img src={process.env.PUBLIC_URL + "/hiking.jpg"} alt="Hiking" className="about-hobby-image" />
+									<img src={process.env.PUBLIC_URL + "/cricket.jpg"} alt="Cricket" className="about-hobby-image" />
+									<img src={process.env.PUBLIC_URL + "/lifting.jpg"} alt="Lifting" className="about-hobby-image" />
 								</div>
 
 								<div className="about-socials">
